@@ -1,0 +1,293 @@
+                                                    /* General */
+* {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+body {
+    background-color: #F1F4FA;
+}
+
+                                                    /* main-container */
+
+.main-container {
+    display: flex;
+}
+
+                                                     /* left-login_page */
+
+.left_login-container {
+    width: 25%;
+    height: 100%;
+    background-color: #fff;
+}
+.top-texts {
+    height: auto;
+    width: auto;
+}
+.top-texts h3 {
+    text-align: center;
+    margin-top: 8%;
+    color: #3A36DB;
+    font-weight: 700;
+    font-size: 16px;
+}
+.top-texts h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 20%;
+}
+
+                                                     /* buttons and inputs */
+
+.buttons-and-inputs {
+    padding: 10%;
+    height: auto;
+    width: auto;
+}
+.sign-up_buttons {
+    display: flex;
+    gap: 8%;
+}
+.sign-up_buttons button:hover {
+    background-color: rgb(218, 219, 219);
+    cursor: pointer;
+}
+.sign-up_buttons button {
+    display: flex;
+    border: none;
+    padding: 0 5%;
+    background-color: #F1F4FA;
+    border-radius: 8px;
+    width: 50%;
+    height: 35px;
+}
+.btn-png {
+    width: 50%;
+}
+.btn-png img {
+    object-fit: contain;
+}
+.btn-text a {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+                                                       /* login-forms */
+
+.login-forms {
+    margin-top: 10px;
+}
+.or_text {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 4%;
+    margin-bottom: 6%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    column-gap: 0px;
+}
+.or_text::before,
+.or_text::after {
+    content: "";
+    height: 1px;
+    background-color: rgb(238, 238, 238);
+    display: block;
+}
+.inputs {
+    position: relative;
+    margin-top: 8%;
+
+}
+.inputs input {
+    border: 1px solid rgba(69, 47, 131, 0.25);
+    background-color: #fff;
+    border-radius: 7px;
+    padding-left: 10px;
+    height: 30px;
+    outline: none;
+    margin-bottom: 3%;
+}
+.inputs span {
+    position: absolute;
+    left: 0;
+    padding: 3%;
+    pointer-events: none;
+    color: grey;
+    transition: 0.5s;
+    width: auto;
+    height: auto;
+}
+.inputs input:valid ~ span,.inputs input:focus ~ span {
+    color: #3A36DB;
+    transform: translateX(10px) translateY(-11px);
+    font-size: 16px;
+    padding: 0 10px;
+    background: #fff ;
+    border-left: 1px solid blue;
+    border-right: 1px solid blue;
+    letter-spacing: 0.1em;
+    transition: 0.3s;
+}
+.inputs input:valid,.inputs input:focus {
+    border: 1px solid blue;
+}
+.check-box {
+    display: flex;
+    margin-top: 10px;
+    font-size: 10px;
+}
+.check-box h4 {
+    margin-left: 10px;
+    font-weight: 700;
+}
+.check-box input {
+    width: 10px;
+    cursor: pointer;
+}
+.check-box a {
+    color: blue;
+    cursor: pointer;
+}
+.create-account {
+    background-color: #3A36DB;
+    border: none;
+    border-radius: 4px;
+    height: 30px;
+    color: white;
+    margin-top: 5%;
+    cursor: pointer;
+}
+.bottom-link {
+    text-align: center;
+    font-size: 10px;
+    font-weight: 700;
+    margin-top: 5%;
+}
+.bottom-link a {
+    color: #3A36DB;
+    cursor: pointer;
+}
+
+                                            /* right-image container */
+.img_container {
+    width: 70%;
+}
+.img_container img {
+    object-fit: contain;
+    padding: 20%;
+}
+
+                                              /* media queries  */
+
+                       /* SMARTPHONES PORTRAIT */
+
+@media (max-width: 480px) {
+    .img_container {
+        display: none;
+    }
+    .left_login-container {
+        width: 100%;
+        background-color: #fff;
+    }
+    body {
+        background-color: #fff;
+    }
+    .top-texts h3 {
+        margin-top: 6%;
+        font-size: 18px;
+    }
+    .top-texts h2 {
+        font-size: 12px;
+        margin-top: 5%;
+    }
+
+  /* buttons and inputs */
+
+    .buttons-and-inputs {
+        padding: 5% 10%;
+    }
+
+    /* login-forms */
+
+    .login-forms {
+        margin-top: 5%;
+    }
+    .or_text {
+        font-size: 10px;
+        margin-top: 2%;
+        margin-bottom: 4%;
+    }
+    .inputs ::placeholder {
+        font-size: 12px;
+    }
+    .inputs h1 {
+        font-size: 14px;
+        margin-bottom: 2%;
+    }
+    .inputs input {
+        height: 35px;
+        margin-bottom: 2%;
+    }
+    .check-box {
+        margin-top: 3%;
+        font-size: 10px;
+    }
+    .check-box h4 {
+        margin-left: 10px;
+        font-weight: 700;
+    }
+    .create-account {
+        margin-top: 3%;
+    }
+}
+
+                                             /* tablet view */
+
+@media (max-width: 720px) and (min-width:681px) {
+    .left_login-container {
+        width: 50%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 680px) and (min-width:481px) {
+    .left_login-container {
+        width: 50%;
+        height: 100%;
+    }
+    .btn-text {
+        display: none;
+    }
+    .sign-up_buttons button {
+        justify-content: center;
+    }
+}
+
+                                                /* TABLETS landscape */
+
+@media (max-width: 980px) and (min-width:721px) {
+    .left_login-container {
+        width: 40%;
+        height: 100%;
+    }
+    .top-texts h2 {
+        text-align: center;
+        font-weight: 700;
+        font-size: 18px;
+        margin-top: 10%;
+    }
+    .bottom-link {
+        font-size: 10px;
+        margin-top: 10px;
+    }
+}
+
+                                                        /* end */
